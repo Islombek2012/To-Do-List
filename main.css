@@ -1,0 +1,187 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+body{
+    background-color: beige;
+}
+::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px burlywood; 
+    border-radius: 5px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 177, 88, 0.538); 
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(255, 213, 149); 
+  }
+.container{
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+.tit{
+    text-align: center;
+    font-size: 50px;
+    font-weight: 800;
+    margin: 30px 0;
+    color: burlywood;
+}
+.form{
+    display: flex;  
+    justify-content: center;
+    gap: 20px;
+}
+.input{
+    max-width: 400px;
+    width: 100%;
+    padding: 12px 10px;
+    border-radius: 6px;
+    background-color: blanchedalmond;
+    color: burlywood;
+    border: 2px solid burlywood;
+    font-size: 20px;
+    outline: none;
+}
+.input::placeholder{
+    color: burlywood;
+}
+.submit{
+    padding: 12px 15px;
+    background-color: blanchedalmond;
+    color: burlywood;
+    border: 2px solid burlywood;
+    font-size: 20px;
+    transition: 0.3s;
+    border-radius: 6px;
+    transform-origin: center;
+}
+
+.submit:hover{
+    cursor: pointer;
+    background-color: transparent;
+    transform: rotate(360deg);
+}
+.submit:active{
+    opacity: 0.6;
+}
+.todos{
+    width: 100%;
+    height: 320px;
+    background-color: bisque;
+    border-radius: 12px;
+    padding: 40px;
+    list-style: none;
+    overflow-y: auto;
+    text-align: start;
+    margin-top: 20px;
+}
+.todo{
+    width: 100%;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: blanchedalmond;
+    border: 2px solid burlywood;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+    transform-origin: top left;
+    transition: all 0.5s linear;
+}
+.todo.succes{
+    background-color: rgba(1, 163, 1, 0.482);
+    text-decoration: line-through green;
+    opacity: 0.7;
+}
+.todo.del{
+    transform: rotate(45deg);
+    transition: all 0.5s linear;
+}
+.todo__text{
+    margin-right: auto;
+    font-size: 22px;
+    color: burlywood;
+}
+.todo button{
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 20px;
+    background-color: transparent;
+    border: 2px solid;
+}
+.done{
+    color: green;
+    border: green;
+}
+.change{
+    color: orange;
+    border: orange;
+}
+.delete{
+    color: red;
+    border: red;
+}
+.fa-regular{
+    pointer-events: none;
+}
+.fa-solid{
+    pointer-events: none;
+}
+.todo button:hover{
+    cursor: pointer;
+}
+.modal{
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff5e;
+    backdrop-filter: blur(5px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.form2{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.input2{
+    max-width: 400px;
+    width: 100%;
+    padding: 12px 10px;
+    border-radius: 6px;
+    background-color: transparent;
+    color: orange;
+    border: 2px solid orange;
+    font-size: 20px;
+    outline: none;
+}
+.input2::placeholder{
+    color: orange;
+}
+.form2 .submit{
+    background-color: transparent;
+    color: orange;
+    border: 2px solid orange;
+}
+
