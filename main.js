@@ -13,15 +13,17 @@ function makeLi(value){
 }
 
 form.addEventListener('submit', (e)=>{
-      e.preventDefault()
-      let inputValue = form.input.value.trim()
-      let li = document.createElement('li')
-      li.classList.add('todo')
-      li.innerHTML = makeLi(inputValue)
-      
-      todos.appendChild(li)
-      localStorage.setItem('todos', JSON.stringify(todos.innerHTML))
-      form.reset()
+      if(form.input.value){
+            e.preventDefault()
+            let inputValue = form.input.value.trim()
+            let li = document.createElement('li')
+            li.classList.add('todo')
+            li.innerHTML = makeLi(inputValue)
+            
+            todos.appendChild(li)
+            localStorage.setItem('todos', JSON.stringify(todos.innerHTML))
+            form.reset()
+      }
       
 })
 document.addEventListener('click',(el)=>{
